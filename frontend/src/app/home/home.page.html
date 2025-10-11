@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="center-title">
+      COSMOS FITNESS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Cosmos Fitness</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<!-- Header -->
+<ion-grid>
+  <!-- Header -->
+  <ion-row class="header">
+    <ion-col>ID</ion-col>
+    <ion-col>Nombre</ion-col>
+    <ion-col>Apellidos</ion-col>
+    <ion-col>Correo</ion-col>
+    <ion-col>Bono contratado</ion-col>
+  </ion-row>
+
+  <!-- Filas dinámicas -->
+  <ion-row *ngFor="let b of gimnasios">
+    <ion-col>{{ b.id }}</ion-col>
+    <ion-col>{{ b.nombre }}</ion-col>
+    <ion-col>{{ b.apellidos }}</ion-col>
+    <ion-col>{{ b.correo }}</ion-col>
+    <ion-col>{{ b.bono }}</ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+<div class="button-row">
+  <ion-button class="btn" (click)="BorradoUsuarios()">Borrar Usuario</ion-button>
+  <ion-button class="btn" (click)="ActualizarUsuarios()">Actualizar Usuario</ion-button>
+  <ion-button class="btn" (click)="AddUsuario()">Añadir Usuario</ion-button>
+</div>
+
+
+</ion-content>

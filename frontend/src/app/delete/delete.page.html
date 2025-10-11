@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Eliminar Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <!-- Formulario para borrar por ID -->
+  <form [formGroup]="deleteForm" (ngSubmit)="borrarUsuario()">
+
+    <ion-item>
+      <ion-label position="floating">ID del usuario</ion-label>
+      <ion-input type="number" formControlName="id" ngDefaultControl></ion-input>
+    </ion-item>
+  <!-- Mensaje de resultado -->
+  <div *ngIf="mensaje" class="ion-padding">
+    <p>{{ mensaje }}</p>
+  </div>
+    <ion-button expand="full" type="submit">Borrar</ion-button>
+
+  </form>
+
+  <!-- Botón para volver a Home -->
+  <ion-button expand="block" (click)="volver()">
+    Volver
+  </ion-button>
+
+</ion-content>
