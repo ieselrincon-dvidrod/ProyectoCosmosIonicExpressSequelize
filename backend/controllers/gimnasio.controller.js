@@ -50,6 +50,32 @@ exports.findOne = (req, res) => {
 
 
 exports.update = (req, res) => {
+
+    const id = parseInt(req.params.id, 10);
+    const { nombre, apellidos, correo, bono } = req.body;
+
+    Gimnasio.findByPk(id)
+        .then(usuario => {
+            if (!usuario) {
+                return res.status(404).send({ message: "Usuario no encontrado" });
+            }
+
+            if (nombre !== undefined) usuario.nombre = nombre;
+            if (apellidos !== undefined) usuario.apellidos = apellidos;
+            if (correo !== undefined) usuario.correo = correo;
+            if (bono !== undefined) usuario.bono = bono;
+
+            return usuario.save()
+                .then(() => res.send({ message: "Usuario actualizado correctamente", usuario }))
+                .catch(err => {
+                    console.error("Error al actualizar usuario:", err);
+                    res.status(500).send({ message: "Error en la base de datos" });
+                });
+        })
+        .catch(err => {
+            console.error("Error al buscar usuario:", err);
+            res.status(500).send({ message: "Error en la base de datos" });
+        });
 }
 
 exports.delete = (req, res) => {

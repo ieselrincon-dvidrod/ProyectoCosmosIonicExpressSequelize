@@ -1,7 +1,5 @@
-/* ------------------ Tu CSS existente ------------------ */
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -17,9 +15,7 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
@@ -33,36 +29,39 @@
   transform: translateX(-50%);
 }
 
-/* ------------------ Tabla con divs ------------------ */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    padding: 20px;
+ion-content {
+  --background: linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 100%);
+  padding: 20px;
+}
+
+ion-header {
+  --background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
 }
 
 .table {
   display: flex;
-  flex-direction: column; /* cada fila será verticalmente apilada */
+  flex-direction: column;
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
 }
 
 .row {
-  display: flex; /* hace que las celdas estén en fila horizontal */
+  display: flex;
 }
 
 .row.header {
-  background-color: #8fd19e; /* verde suave */
+  background-color: #8fd19e;
   font-weight: bold;
 }
 
 .cell {
-  flex: 1; /* cada celda ocupa el mismo ancho */
+  flex: 1; 
   padding: 10px 15px;
   border-right: 1px solid #ccc;
   text-align: center;
-  box-sizing: border-box; /* asegura que padding no rompa el ancho */
+  box-sizing: border-box;
 }
 
 .cell:last-child {
@@ -70,59 +69,60 @@ body {
 }
 
 .header {
-    font-weight: bold;
-    background-color: #8fd19e; /* verde suave */
+  font-weight: bold;
+  background-color: #8fd19e;
 }
 
 .row:nth-child(even) .cell {
-    background-color: #d3e3f3; /* azul suave */
+  background-color: #d3e3f3; 
 }
 
 .row:nth-child(odd) .cell:not(.header) {
-    background-color: #e6f4ea; /* verde suave alterno */
+  background-color: #e6f4ea;
 }
 
 .button-row {
   display: flex;
-  justify-content: center; /* centra los botones */
-  gap: 10px;               /* espacio entre botones */
-  width: 50%;              /* ocupa solo la mitad de la pantalla */
-  margin: 0 auto;          /* centra el bloque horizontalmente */
+  justify-content: center;
+  gap: 10px; 
+  width: 50%;
+  margin: 20px auto 0;
 }
 
-
-.my-btn {
-  flex: 1;          /* cada botón ocupa el mismo ancho */
-  max-width: 150px; /* opcional, ancho máximo */
+.my-btn, .btn {
+  flex: 1;
+  max-width: 150px;
 }
 
-
-/* Colores alternos para las filas */
-ion-row:nth-child(even) {
-  background-color: #dfffe0; /* verde clarito */
+ion-grid {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-ion-row:nth-child(odd) {
-  background-color: #e0f7ff; /* azul clarito */
-}
-
-/* Cabecera destacada */
 ion-row.header {
-  background-color: #b3e6b3; /* verde más intenso */
+  background-color: #b3e6b3;
   font-weight: bold;
 }
 
-/* Borde muy suave alrededor de cada celda */
-ion-col {
-  border: 1px solid rgba(0, 0, 0, 0.1); /* borde gris muy tenue */
-  padding: 5px 0;
-  text-align: center;
-  word-wrap: break-word; /* permite que textos largos hagan wrap */
+ion-row:nth-child(even) {
+  background-color: #dfffe0;
 }
 
-/* Opcional: borde alrededor de toda la tabla */
-ion-grid {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 5px; /* esquinas redondeadas */
-  overflow: hidden;    /* que el borde quede limpio */
+ion-row:nth-child(odd) {
+  background-color: #e0f7ff;
 }
+
+ion-col {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 0;
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+

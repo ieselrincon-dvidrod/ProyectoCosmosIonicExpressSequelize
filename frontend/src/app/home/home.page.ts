@@ -18,7 +18,6 @@ export class HomePage implements OnInit {
     this.getAllGimnasios();
   }
 
-  // 🔹 Se dispara cada vez que entras a esta página
   ionViewWillEnter() {
     this.getAllGimnasios();
   }
@@ -27,7 +26,7 @@ export class HomePage implements OnInit {
     this.gimnasioService.getGimnasios().subscribe({
       next: (response: any) => {
         console.log('Respuesta del backend:', response);
-        this.gimnasios = response; // el backend devuelve directamente un array
+        this.gimnasios = response;
       },
       error: (err) => {
         console.error('Error al obtener gimnasios:', err);

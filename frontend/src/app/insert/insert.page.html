@@ -10,7 +10,6 @@
 
 <form [formGroup]="gimnasioForm" (ngSubmit)="createUsuario()">
 
-  <!-- Nombre -->
   <ion-item>
     <ion-label position="floating">Nombre</ion-label>
     <ion-input type="text" formControlName="nombre"></ion-input>
@@ -19,7 +18,6 @@
     <p *ngIf="gimnasioForm.get('nombre')?.errors?.['required']">El nombre es obligatorio</p>
   </ion-text>
 
-  <!-- Apellidos -->
   <ion-item>
     <ion-label position="floating">Apellidos</ion-label>
     <ion-input type="text" formControlName="apellidos"></ion-input>
@@ -28,7 +26,6 @@
     <p *ngIf="gimnasioForm.get('apellidos')?.errors?.['required']">Los apellidos son obligatorios</p>
   </ion-text>
 
-  <!-- Correo -->
   <ion-item>
     <ion-label position="floating">Correo</ion-label>
     <ion-input type="email" formControlName="correo"></ion-input>
@@ -38,7 +35,6 @@
     <p *ngIf="gimnasioForm.get('correo')?.errors?.['email']">Introduce un correo válido</p>
   </ion-text>
 
-  <!-- Bono -->
   <ion-item>
     <ion-label position="floating">Bono</ion-label>
     <ion-input type="text" formControlName="bono"></ion-input>
@@ -47,14 +43,12 @@
     <p *ngIf="gimnasioForm.get('bono')?.errors?.['required']">El bono es obligatorio</p>
   </ion-text>
 
-  <!-- Botón Submit -->
   <ion-button expand="full" type="submit" [disabled]="gimnasioForm.invalid">
     Enviar
   </ion-button>
 </form>
 
 
-    <!-- Botón de volver -->
     <ion-button expand="block" (click)="volver()">
       volver
     </ion-button>

@@ -11,35 +11,32 @@ import { GimnasioService } from '../services/gimnasio-service';
 })
 export class DeletePage implements OnInit {
 
-  deleteForm!: FormGroup; // <- le decimos a TS que se inicializará
-  mensaje: string = '';
+  deleteForm!: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder,
     private gimnasioService: GimnasioService,
-    private router: Router // <- inyectamos Router
+    private router: Router
   ) { }
 
   ngOnInit() {
-  this.deleteForm = this.formBuilder.group({
-  id: [null, [Validators.required, Validators.min(1)]]
-});
+    this.deleteForm = this.formBuilder.group({
+      id: [null, [Validators.required, Validators.min(1)]]
+    });
   }
 
   borrarUsuario() {
-    if (this.deleteForm.valid) {
-      const id = this.deleteForm.value.id;
-      this.gimnasioService.deleteGimnasio(id).subscribe({
-        next: () => {
-          this.mensaje = `Usuario con id ${id} eliminado correctamente`;
-        },
-        error: (err) => {
-          this.mensaje = `Error al eliminar usuario: ${err.error.message || err.message}`;
-        }
-      });
-    } else {
-      this.mensaje = 'Debes ingresar un ID válido';
-    }
+    if (!this.deleteForm.valid) return;
+
+    const id = this.deleteForm.value.id;
+    this.gimnasioService.deleteGimnasio(id).subscribe({
+      next: () => {
+        this.volver();
+      },
+      error: (err) => {
+        console.error("Error al eliminar usuario:", err);
+      }
+    });
   }
 
   volver() { 

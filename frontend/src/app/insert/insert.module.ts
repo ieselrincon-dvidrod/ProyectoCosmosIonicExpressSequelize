@@ -10,7 +10,7 @@ import { InsertPage } from './insert.page';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule, // <-- lo ponemos junto a FormsModule
+    ReactiveFormsModule,
     IonicModule,
     InsertPageRoutingModule
   ],

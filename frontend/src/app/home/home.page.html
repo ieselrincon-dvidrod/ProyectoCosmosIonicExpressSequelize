@@ -13,10 +13,9 @@
     </ion-toolbar>
   </ion-header>
 
-<!-- Header -->
-<ion-grid>
-  <!-- Header -->
-  <ion-row class="header">
+  <ion-grid>
+
+    <ion-row class="header">
     <ion-col>ID</ion-col>
     <ion-col>Nombre</ion-col>
     <ion-col>Apellidos</ion-col>
@@ -24,7 +23,6 @@
     <ion-col>Bono contratado</ion-col>
   </ion-row>
 
-  <!-- Filas dinámicas -->
   <ion-row *ngFor="let b of gimnasios">
     <ion-col>{{ b.id }}</ion-col>
     <ion-col>{{ b.nombre }}</ion-col>
