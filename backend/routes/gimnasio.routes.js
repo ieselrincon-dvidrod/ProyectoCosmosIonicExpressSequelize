@@ -8,6 +8,5 @@ module.exports = app => {
     router.put("/:id", gimnasios.update);
     router.delete("/:id", gimnasios.delete);
 
-    // Registrar rutas en la app con prefijo /api/gimnasios
     app.use('/api/gimnasios', router);
 };

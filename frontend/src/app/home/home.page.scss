@@ -24,9 +24,13 @@
 }
 
 .center-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  color: #1b5e20;
+  letter-spacing: 1px;
+  position: static;
+  transform: none;
 }
 
 ion-content {
@@ -92,6 +96,23 @@ ion-header {
 .my-btn, .btn {
   flex: 1;
   max-width: 150px;
+  font-weight: bold;
+  --border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.my-btn[color="success"], .btn[color="success"] {
+  --background: #8fd19e;
+  --color: #fff;
+}
+
+.btn-block-success {
+  font-weight: bold;
+}
+
+
+.my-btn:hover, .btn:hover {
+  transform: scale(1.05);
 }
 
 ion-grid {
@@ -125,4 +146,3 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
 }
-

@@ -1,17 +1,18 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Actualizar usuario</ion-title>
+    <ion-title class="center-title">Actualizar Usuario</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
+
   <form [formGroup]="gimnasioForm">
 
     <ion-item>
       <ion-label position="floating">ID del usuario</ion-label>
       <ion-input type="number" formControlName="id"></ion-input>
     </ion-item>
-    <ion-button expand="full" type="button" (click)="cargarUsuario()">Cargar usuario</ion-button>
+    <ion-button expand="full" color="success" class="btn-block-success" type="button" (click)="cargarUsuario()">Cargar usuario</ion-button>
 
     <ion-item>
       <ion-label position="floating">Nombre</ion-label>
@@ -33,11 +34,10 @@
       <ion-input type="text" formControlName="bono"></ion-input>
     </ion-item>
 
-    <ion-button expand="full" type="button" (click)="updateUsuario()">
-   Actualizar
-    </ion-button>
+    <ion-button expand="full" color="success" class="btn-block-success" type="button" (click)="updateUsuario()">Actualizar</ion-button>
 
-    <ion-button expand="block" (click)="volver()">Volver</ion-button>
+    <ion-button expand="block" color="success" class="btn-block-success" (click)="volver()">Volver</ion-button>
 
   </form>
+
 </ion-content>

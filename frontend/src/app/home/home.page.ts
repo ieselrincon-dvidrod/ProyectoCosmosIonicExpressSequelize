@@ -38,4 +38,6 @@ export class HomePage implements OnInit {
   ActualizarUsuarios() { this.router.navigateByUrl("/update"); }
   AddUsuario() { this.router.navigateByUrl("/insert"); }
 
+
+  volver() { this.router.navigateByUrl("/landing"); }
 }

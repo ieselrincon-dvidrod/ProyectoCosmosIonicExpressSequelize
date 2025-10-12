@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Eliminar Usuario</ion-title>
+    <ion-title class="center-title">Eliminar Usuario</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,13 +13,10 @@
       <ion-input type="number" formControlName="id" ngDefaultControl></ion-input>
     </ion-item>
 
-
-    <ion-button expand="full" type="submit">Borrar</ion-button>
+  <ion-button expand="full" color="success" class="btn-block-success" type="submit">Borrar</ion-button>
 
   </form>
 
-  <ion-button expand="block" (click)="volver()">
-    Volver
-  </ion-button>
+  <ion-button expand="block" color="success" class="btn-block-success" (click)="volver()">Volver</ion-button>
 
 </ion-content>

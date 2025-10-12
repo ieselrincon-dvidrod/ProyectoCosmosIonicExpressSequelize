@@ -1,13 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>landing</ion-title>
+    <ion-title class="center-title">COSMOS FITNESS</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">landing</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="landing-content">
+  <ion-grid class="full-height">
+    <ion-row class="ion-justify-content-center ion-align-items-center full-height">
+      <ion-col size="12" size-md="6" size-lg="4">
+        <ion-card class="landing-card">
+          <img src="assets/gym.jpg" alt="Cosmos Fitness" class="landing-image">
+
+          <div class="landing-text">
+            <strong>Bienvenido a Cosmos Fitness</strong>
+            <p>Gestiona fácilmente los usuarios, bonos y actividades del gimnasio desde una interfaz moderna y sencilla.</p>
+          </div>
+
+          <ion-button expand="block" color="success" routerLink="/home">
+            Ir a Gestión de Usuarios
+          </ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
