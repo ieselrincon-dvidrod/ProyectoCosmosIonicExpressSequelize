@@ -68,7 +68,7 @@
 
 ---
 
-## 🧾 Enlace a Postman (10 %)
+## 🧾 Enlace a Postman
 
 - En este enlace se pueden consultar y probar todos los **endpoints funcionales** del proyecto:  
   👉 [Colección de Postman – Cosmos Fitness](https://www.postman.com/damarisvidalrodriguez-3552014/workspace/damaris-vidal-s-workspace/collection/48544845-acfbd745-e74d-4f91-983b-acefa50a7004?action=share&source=copy-link&creator=48544845)  
