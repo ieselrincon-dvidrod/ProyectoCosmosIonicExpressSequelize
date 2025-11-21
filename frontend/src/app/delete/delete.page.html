@@ -6,17 +6,21 @@
 
 <ion-content [fullscreen]="true" class="ion-padding">
 
-  <form [formGroup]="deleteForm" (ngSubmit)="borrarUsuario()">
+  <form [formGroup]="deleteForm">
 
     <ion-item>
       <ion-label position="floating">ID del usuario</ion-label>
       <ion-input type="number" formControlName="id" ngDefaultControl></ion-input>
     </ion-item>
 
-  <ion-button expand="full" color="success" class="btn-block-success" type="submit">Borrar</ion-button>
+    <ion-button expand="full" class="btn-block-success" (click)="confirmarBorrado()">
+      Borrar
+    </ion-button>
 
   </form>
 
-  <ion-button expand="block" color="success" class="btn-block-success" (click)="volver()">Volver</ion-button>
+  <ion-button expand="block" class="btn-block-success" (click)="volver()">
+    Volver
+  </ion-button>
 
 </ion-content>

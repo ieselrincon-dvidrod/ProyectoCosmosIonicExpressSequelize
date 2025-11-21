@@ -42,6 +42,14 @@
         <p *ngIf="gimnasioForm.get('bono')?.errors?.['required']">El bono es obligatorio</p>
       </ion-text>
 
+      <ion-button expand="full" class="btn-block-success" type="button" (click)="tomarFoto()">
+        Tomar Foto
+      </ion-button>
+
+      <div *ngIf="foto" style="text-align:center; margin: 10px 0;">
+        <img [src]="foto" alt="Foto del usuario" style="width:150px; border-radius:8px;">
+      </div>
+
       <ion-button expand="full" color="success" class="btn-block-success" type="submit" [disabled]="gimnasioForm.invalid">
         Enviar
       </ion-button>
